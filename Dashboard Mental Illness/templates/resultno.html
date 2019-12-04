@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Mental Health at Tech Companies</title>
+  </head>
+  <body>
+    <style>
+    body {background-image: url("https://cdn.pixabay.com/photo/2015/06/08/15/00/daisy-801813_960_720.jpg");
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    background-position: left;
+    height: 100%; } 
+    </style>
+    
+    {% include 'navbar.html' %}
+
+{% block body %}
+    <h4></h4>
+    <blockquote class="blockquote text-center">
+    <p class="mb-3"> Your risk result is low and marked as "low" with probability score of {{hasil_pred}}</p>
+    <img src="https://i.ibb.co/4fYbq9B/nothealthy.png" class="rounded mx-auto d-block" alt="Sun" height="300" weight="60">
+    <h4></h4>
+    
+    
+    <h4></h4>
+    <h4></h4>
+    <h6 class="mb-3"> The texts you're seeing right now are the actual sentiment belong to the same respondent group. 
+
+    </h6> 
+    <h6 class="mb-3"> I found that healthy respondents liberately use the word "Stress", "Interview", "Problem", "Relevant", "Bring", "Depend", "Affect" and "Might"
+    </h6>
+    <h6 class="mb-3"> While this fact is still open for interpretation, the other group with mental health disorder use the word "Conversation", "Supportive", "Illness", "Open", "Understanding", "Will", "Much" and "Company". Do understand that this is not the sole predictor your mental health. Don't hesitate to share or ask for help shall you find it relevant to your current condition, afterall your willingness to share is one of the main features to predict the result of this quiz.
+    </h6>
+    <h4></h4>
+    <h4></h4>
+    <!-- <footer class="blockquote-footer">The texts you're seeing right now are the actual sentiment belong to the same respondent group. I found that respondents with mental health disorder liberately use the word  "Conversation", "Supportive", "Illness", "Open", "Understanding", "Will", "Much" and "Company". While this fact is still open for interpretation, the other group in the survey with no mental health disorder use the word "Stress", "Interview", "Problem", "Relevant", "Bring", "Depend", "Affect" and "Might". Do understand that this is not the sole predictor your mental health. Don't hesitate to share or ask for help shall you find it relevant to your current condition, afterall your willingness to share is one of the main features to predict the result of this quiz.<div class=""></div></footer> -->
+    </blockquote>
+
+{% endblock body %}

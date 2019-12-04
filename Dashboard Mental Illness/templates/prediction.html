@@ -1,0 +1,198 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h4></h4>
+<img src="https://i.ibb.co/TB3LvxR/MENTAL-HEALTH-TEST.png" class="rounded mx-auto d-block" alt="Sun" height="300" weight="70">
+
+    <div class="container">
+        <div class='row justify-content-center'>
+            <div class="col-md-6">
+                <h4> </h4>
+                <h5> Take 2 minutes to discover your mental health risk </h5>
+                
+                <h6> If you find 0-10 scale, 0 is the least approval of the statement meanwhile 10 represent maximum approval for the given statement</h6>
+                <form action="/" method="POST">
+                    <select class="form-control mt-3" name="identified" id="">
+                        <option value="" disabled selected>Are you openly identified at work as a person with a mental health issue?</option>
+                        {% for item in data_identified %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <!-- 'Did you ever discuss your mental health with your previous employer?' -->
+                    <select class="form-control mt-3" name="discussprev" id="">
+                        <option value="" disabled selected>Did you ever discuss your mental health with your previous employer?</option>
+                        {% for item in datadiscussprev %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!-- Have you ever discussed your mental health with coworkers? -->
+                    <select class="form-control mt-3" name="discowork" id="">
+                        <option value="" disabled selected>Have you ever discussed your mental health with coworkers?</option>
+                        {% for item in datadiscowork %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!-- Have you ever discussed your mental health with your employer? -->
+                    <select class="form-control mt-3" name="discemploy" id="">
+                        <option value="" disabled selected>Have you ever discussed your mental health with your employer?</option>
+                        {% for item in datadiscemploy %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!-- 'Have you ever sought treatment for a mental health disorder from a mental health professional?' -->
+                    <select class="form-control mt-3" name="sought" id="">
+                        <option value="" disabled selected>Have you ever sought treatment for a mental health disorder from a mental health professional?</option>
+                        {% for item in datasought %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!-- How willing would you be to share with friends and family that you have a mental illness? -->
+                    <select class="form-control mt-3" name="bff" id="">
+                        <option value="" disabled selected>On a scale from 0 tp 10, how willing would you be to share with friends and family that you have a mental illness?</option>
+                        {% for item in databff %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!-- Have you observed or experienced an unsupportive or badly handled response to a mental health issue in your current or previous workplace?'
+                     -->
+                     <select class="form-control mt-3" name="handled" id="">
+                            <option value="" disabled selected>Have you observed or experienced an unsupportive or badly handled response to a mental health issue in your current or previous workplace?</option>
+                            {% for item in datahandled %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Would you have been willing to discuss your mental health with your coworkers at previous employers? -->
+                    <select class="form-control mt-3" name="wilcow" id="">
+                            <option value="" disabled selected>Would you have been willing to discuss your mental health with your coworkers at previous employers? </option>
+                            {% for item in datawilcow %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Did your previous employers ever formally discuss mental health (as part of a wellness campaign -->
+                    <select class="form-control mt-3" name="formal" id="">
+                            <option value="" disabled selected>Did your previous employers ever formally discuss mental health (as part of a wellness campaign)? </option>
+                            {% for item in dataformal %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Did your previous employers provide resources to learn more about mental health disorders and how to seek help? -->
+                    <select class="form-control mt-3" name="seekhelp" id="">
+                            <option value="" disabled selected>Did your previous employers provide resources to learn more about mental health disorders and how to seek help? </option>
+                            {% for item in dataseekhelp %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Do you have a family history of mental illness? -->
+                    <select class="form-control mt-3" name="fami" id="">
+                            <option value="" disabled selected>Do you have a family history of mental illness? </option>
+                            {% for item in datafami %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Has your employer ever formally discussed mental health (for example, as part of a wellness campaign or other official communication) -->
+                    <select class="form-control mt-3" name="curemploy" id="">
+                            <option value="" disabled selected>Has your current employer ever formally discussed mental health (as part of a wellness campaign)?</option>
+                            {% for item in datacuremploy %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Have you had a mental health disorder in the past? -->
+                    <select class="form-control mt-3" name="past" id="">
+                            <option value="" disabled selected>Have you had a mental health disorder in the past?</option>
+                            {% for item in datapast %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'Have your observations of how another individual who discussed a mental health issue made you less likely to reveal a mental health issue yourself in your current workplace?' -->
+                    <select class="form-control mt-3" name="ilfil" id="">
+                            <option value="" disabled selected>Have your observations of how another individual who discussed a mental health issue made you less likely to reveal a mental health issue yourself in your current workplace?</option>
+                            {% for item in datailfil %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources provided by your employer?'-->
+                    <select class="form-control mt-3" name="anon" id="">
+                            <option value="" disabled selected>Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources provided by your employer?</option>
+                            {% for item in dataanon %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Was your anonymity protected if you chose to take advantage of mental health or substance abuse treatment resources with previous employers? -->
+                    <select class="form-control mt-3" name="anonprev" id="">
+                            <option value="" disabled selected>Previously, was your anonymity protected by your employer shall you take mental health benefit?</option>
+                            {% for item in dataanonprev %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'What is your gender?' -->
+                    <select class="form-control mt-3" name="gender" id="">
+                            <option value="" disabled selected>What is your gender?</option>
+                            {% for item in datagender %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Would you be willing to bring up a physical health issue with a potential employer in an interview? -->
+                    <select class="form-control mt-3" name="iview" id="">
+                            <option value="" disabled selected>Would you be willing to bring up a physical health issue with a potential employer in an interview?</option>
+                            {% for item in dataiview %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Would you bring up your mental health with a potential employer in an interview? -->
+                    <select class="form-control mt-3" name="interview" id="">
+                            <option value="" disabled selected>Would you bring up a physical health issue with a potential employer in an interview?</option>
+                            {% for item in datainterview %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- Would you feel more comfortable talking to your coworkers about your physical health or your mental health? -->
+                    <select class="form-control mt-3" name="comfy" id="">
+                            <option value="" disabled selected>Would you feel more comfortable talking to your coworkers about your physical health or your mental health? </option>
+                            {% for item in datacomfy %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'Would you have been willing to discuss your mental health with your direct supervisor(s)?' -->
+                    <select class="form-control mt-3" name="spv" id="">
+                            <option value="" disabled selected>Would you have been willing to discuss your mental health with your direct supervisor(s)? </option>
+                            {% for item in dataspv %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'Would you have felt more comfortable talking to your previous employer about your physical health or your mental health?' -->
+                    <select class="form-control mt-3" name="comforttalk" id="">
+                            <option value="" disabled selected>Previously, would you have felt more comfortable talking to your employer about your physical health or your mental health? </option>
+                            {% for item in datacomforttalk %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'If you have a mental health disorder, how often do you feel that it interferes with your work' -->
+                    <select class="form-control mt-3" name="inter" id="">
+                            <option value="" disabled selected>If you have a mental health disorder, how often do you feel that it interferes with your work</option>
+                            {% for item in datainter %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+                    <!-- 'What is your age?' -->
+                    <select class="form-control mt-3" name="age" id="">
+                            <option value="" disabled selected>What is your age?</option>
+                            {% for item in dataage %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %}
+                    </select>
+
+
+
+
+                   
+    
+                    <button type="submit" class="btn btn-dark mt-3">Find out my mental health risk</button>
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+{% endblock body %}
